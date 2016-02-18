@@ -118,3 +118,13 @@ Type
 man
 ```
 for every command before trying it out. 
+
+### Fix merge conflicts in git during git pull
+to use all edits from "your" file:
+'''
+git checkout --ours file
+'''
+to use all edits from "their" file:
+'''
+git checkout --theirs file
+'''
