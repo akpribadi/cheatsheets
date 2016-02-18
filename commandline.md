@@ -51,10 +51,10 @@ zip squash.zip file1 file2 file3
 
 ### Soft links
 
-Make a pretend file in a new place that jumps to the old file when you look at it.
+Make a pretend file in a new place that jumps to the source when you look at it.
 
 ```
-ln -s oldfile newplace
+ln -s source newplace
 ```
 
 ### Hard links
@@ -71,6 +71,24 @@ Open all files that match this glob command, except if they have `stream` in the
 
 ```
 ls -1 exon_3p_exonbody_tier1_*/homerResults.html | grep -v stream | xargs open
+```
+
+### Transferring files between tscc and laptop
+
+From laptop terminal is easier
+```
+cmd
+
+set PATH=path\to\putty
+pscp -i path\to\key $USER@tscc.sdsc.edu:path\to\file \local\path\to\file
+```
+
+### Verify file is correct
+
+Cryptic digest gives unique #, should be the same for the same file
+```
+md5
+md5checksum
 ```
 
 ## Installing programs 
